@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>House of DRUMS</title>
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+
+    <script src="bootstrap/js/jquery.js"></script>
+
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+    <!-- Tampilan Nama Web -->
+
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+
+                <span class="sr-only">Navigasi</span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+            </button>     
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a href="Index.html">Home</a></li>
+
+                <li><a href="About.html">About Us</a></li>
+
+                <li><a href="Product.html">Product</a></li>
+
+                <li><a href="Contact.html">Contact</a></li>
+
+                <li><a href="Buy Now.html">Buy Now</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <div class="jumbotron">
+
+        <h1>House of DRUMS</h1>
+
+        <p>House of DRUMS merupakan situs membeli drum, dan kumpulan review drum dari seluruh penjuru dunia</p>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+
+            <h2>About Us</h2>
+
+            <p>House of DRUMS didirikan oleh seorang pemain drum asal surabaya. Ia merintis karir nya sebagai drummer sejak dia berkuliah</p>
+
+            <p><a href="About.html" class="btn btn-success">Selengkapnya &raquo;</a></p>
+
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+
+            <h2>Product</h2>
+
+            <p>Kami menjual berbagai macam drum, aksesoris drum, baik secara paket maupun terpisah</p>
+
+            <p><a href="Product.html" class="btn btn-success">Selengkapnya &raquo;</a></p>
+
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+
+            <h2>Contact</h2>
+
+            <p>Anda memiliki pertanyaan seputar drum ? Anda memiliki pertanyaan tentang mekanisme pembelian ? Silahkan berikan pertanyaan kepada kami</p>
+
+            <p><a href="Contact.html" class="btn btn-success">Selengkapnya &raquo;</a></p>
+
+        </div>
+
+        <div class="clearfix visible-md-block"></div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+
+            <h2>Buy Now</h2>
+
+            <p>Tertarik untuk membeli ? Langsung saja pesan sekarang !</p>
+
+            <p><a href="Buy Now.html" class="btn btn-success">Selengkapnya &raquo;</a></p>
+
+        </div>
+                            <div id="piechart"></div>
+
+<script type="text/javascript" src="loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Laguange', 'Users'],
+  ['drum', 744058],
+  ['Gitar', 740610],
+  ['Piano', 478153],
+  ['Bass', 330259]
+  
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Pemakaian Alat Music Di Indonesia', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <footer>
+
+                <p>© HouseofDRUMS.com </p>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
